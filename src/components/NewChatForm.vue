@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import { ref } from '@vue/reactivity'
+import { ref } from 'vue'
 import getUser from '../composables/getUser'
 import useCollection from '../composables/useCollection'
 import {timeStamp} from '../firebase/config'
@@ -28,7 +28,7 @@ export default {
             }
 
             await addDoc(chat)
-            if(!error){
+            if(!error.value){
             message.value = ''
             }
 
